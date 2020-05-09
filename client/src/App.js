@@ -1,12 +1,14 @@
 import React from 'react'
-import './App.css'
+import { BrowserRouter as Router, Route } from 'react-router-dom'
 
-function App () {
-  return (
+import Calendar from './calendar/pages/Calendar'
 
-    <h1>Hello</h1>
-
-  )
+const App = () => {
+  return <Router>
+    <Route path='/' exact>
+      <Calendar />
+    </Route>
+  </Router>
 }
 
 export default App

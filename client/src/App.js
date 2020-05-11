@@ -1,13 +1,16 @@
 import React from 'react'
-import { BrowserRouter as Router, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Redirect, Switch } from 'react-router-dom'
 
 import Calendar from './calendar/pages/Calendar'
 
 const App = () => {
   return <Router>
-    <Route path='/' exact>
-      <Calendar />
-    </Route>
+    <Switch>
+      <Route path='/' exact>
+        <Calendar />
+      </Route>
+      <Redirect to='/' />
+    </Switch>
   </Router>
 }
 
